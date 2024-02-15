@@ -1,0 +1,35 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/other.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+
+    <title>To-Do List</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <div class="todo-container">
+    <h1>To-Do List for this Blog project</h1>
+    <p class="todo-description">Here you will find the to-do-list tasks I went through in order to create this blog project after attending to a <strong>Udemy</strong> course from <u>Angela Yu</u> entitled <strong><i>'2024 Complete Web Development Bootcamp'.</i> </strong></p>
+    <ul>
+        <% todos.forEach(function(task) { %>
+            <li><%= task %></li>
+        <% }); %>
+    </ul>
+    <a href="/">Back to Blog</a>
+</div>
+    <%- include('partials/footer') %>
+    </div>
+</body>
+</html>

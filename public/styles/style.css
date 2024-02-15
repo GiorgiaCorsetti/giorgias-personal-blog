@@ -1,0 +1,477 @@
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body, html {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333; /* Improved readability */
+    background-color: #F8CFD8;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Posts Styling */
+.post {
+    background-color: #80B7B3;
+    margin-bottom: 0px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Navigation & Link/Button Styles */
+a, .btn , .btn-action {
+    color: #ffffff; /* Button text color */
+    background-color: #AE445A; /* Button background color */
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin: 5px;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+}
+
+a:hover, .btn:hover , .btn-action:hover {
+    background-color: #14a3ad; /* Darker shade on hover */
+    opacity: 0.9;
+}
+
+/* Typography */
+h1 {
+    text-align: center;
+    margin: 30px 0;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #451952;
+}
+
+
+/* Form Styling */
+.compose-form {
+    background-color: #fff;
+    padding: 10px 0px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.compose-form input, .compose-form textarea, .compose-form button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.compose-form button {
+    background-color: #662549;
+    color: white;
+    cursor: pointer;
+}
+
+.compose-form button:hover {
+    background-color: #662549;
+}
+
+.other-btns{
+    text-align: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn-action {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px;
+    /* Ensure text is centered for all action buttons */
+    text-align: center;
+}
+
+
+.edit-btn {
+    border: 1px solid transparent; /* Make <a> look like <button> */
+    background-color: #de923b;
+}
+
+.buttons-container {
+    text-align: center; /* Center-align the content */
+}
+
+.delete-btn {
+    background-color: #08282C; /* Use the same color as .btn-action */
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+body > main > div > p {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#posts > div > div > form > button{
+    border: 1px solid transparent; /* Make <a> look like <button> */
+    color: rgb(255, 255, 255);
+    background-color: #08282C;
+    font-family: 'Poppins', sans-serif;;
+}
+
+#posts > div > div > form{
+    border: 1px solid transparent; /* Make <a> look like <button> */
+    background-color: #08282C;
+}
+
+
+.compose-section {
+    background-color: #F8CFD8; /* Light background for contrast */
+    padding: 20px;
+    margin: 40px auto; /* Adds margin to the top and bottom, auto centers horizontally */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Soft rounded corners */
+    max-width: 800px; /* Limits the maximum width */
+}
+
+.compose-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds space between form elements */
+}
+
+.compose-form input, .compose-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.compose-form button {
+    padding: 10px;
+    background-color: #AE445A; /* Theme color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.compose-form button:hover {
+    background-color: #96203A; /* Darker shade for hover effect */
+}
+
+@media (max-width: 768px) {
+    .compose-section {
+        margin: 20px 10px; /* Adjusts margin for smaller screens */
+    }
+
+    .compose-form {
+        flex-direction: column;
+    }
+}
+
+#posts > div > div {
+    margin-top: 20px;
+}
+
+
+#navbarSupportedContents > nav > nav {
+    margin-right: 50px;
+}
+
+#about-page{
+    margin-bottom: 70px;
+}
+
+.about-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Align items at the start */
+    gap: 20px; /* Adjust the space between the content and the image */
+    max-width: 1200px; /* Adjust based on your design preference */
+    margin: 30px 30px 30px 30px; /* Center the container */
+}
+
+.about-content-left, .about-content-right {
+flex: 1 1 300px; /* Allow both children to grow and take up equal space */
+    align-items: center;
+    margin:10px;
+}
+
+.about-content-right{
+    padding-top: 50px;
+    margin-left: 20px;
+}
+.about-content-left{
+    padding-right: 25px;
+}
+
+.about-content-right img {
+    width: 100%;
+    max-width: 400px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: flex; /* Adjust if necessary */
+    margin-left: auto; /* Center the image, if needed */
+    margin-right: auto; /* Center the image, if needed */
+    border-radius: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+    .about-page-container {
+        flex-direction: column; /* Stack content and image vertically on smaller screens */
+        align-items: center;
+        gap: 100px;
+    }
+    .about-content-left, .content-right {
+        width: 100%; /* Allow content to take full width on smaller screens */
+        padding: 0 10px;
+    }
+    .about-content-right img {
+        margin-top: 50px; /* Add some top margin to the image on smaller screens */
+    }
+}
+
+
+
+
+.contact-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items at the start */
+    gap: 20px; /* Adjust the space between the content and the image */
+    max-width: 1200px; /* Adjust based on your design preference */
+    margin: 30px 30px 30px 30px; /* Center the container */
+
+}
+
+.contact-container {
+    flex: 1;
+    text-align: center; /* Ensures text alignment is to the left */
+    margin: 0px 50px 50px 50px;
+    background-color: #F8CFD8;
+
+}
+
+body > main > div > div.content-left {
+    margin-right: 30px;
+    margin-left: 30px;
+    text-align: center;
+}
+
+.contact-image {
+    flex-basis: 400px; /* Adjust based on your image size */
+    text-align: center; /* Centers the image in its container */
+    margin-left: 100px;
+    
+}
+
+
+
+.plain-link {
+    background-color: transparent; /* Removes any background */
+    color: #007BFF; /* Standard link color, change as needed */
+    padding: 0; /* Removes padding */
+    border: none; /* Removes border */
+    display: inline; /* Default display for links */
+    margin: 0; /* Resets margin */
+    text-decoration: underline; /* Underlines the link */
+    cursor: pointer; /* Keeps the pointer cursor */
+}
+
+.plain-link:hover {
+    color: #0056b3; /* Darker shade on hover, adjust as needed */
+    opacity: 1; /* Resets any opacity changes from button styles */
+    background-color: transparent; /* Ensures background remains transparent on hover */
+}
+
+.footer-nav a {
+    background-color: transparent; /* Remove any background color */
+    color: #fff; /* Set text color to white */
+    padding: 0; /* Remove padding if any */
+    margin: 0 10px; /* Adjust margin as needed */
+    text-decoration: none; /* Optional: remove underline from links */
+}
+
+.footer-nav a:hover {
+    color: #ccc; /* Lighter shade of white for hover effect */
+    text-decoration: underline; /* Optional: add underline on hover */
+}
+
+.page-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* Align items at the start */
+    gap: 240px; /* Adjust the space between the content and the image */
+    max-width: 1200px; /* Adjust based on your design preference */
+    margin: 30px 30px 30px 30px; /* Center the container */
+    padding: 20px 0; /* Add some vertical padding */
+}
+
+.content-left, .content-right {
+    flex: 1 1 300px; /* Allow both children to grow and take up equal space */
+    align-items: center;
+    margin:10px;
+}
+
+.content-right img {
+    width: 100%;
+    max-width: 400px; /* Adjust the max width of the image as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: flex;
+    border-radius: 20%;
+}
+
+@media (max-width: 768px) {
+    .page-container {
+        flex-direction: column; /* Stack content and image vertically on smaller screens */
+        align-items: center;
+        gap: 100px;
+    }
+    .content-left, .content-right, .about-content-left, .about-content {
+        flex: 1 1 100%; /* Allow content to take full width on smaller screens */
+    }
+    .content-right img {
+        margin: 20px; /* Add some top margin to the image on smaller screens */
+        width: 80%;
+    }
+    .post{
+        margin-bottom: 20px;
+    }
+}
+
+#posts > div:nth-child(2) > div > form{
+    background-color:#08282C ;
+}
+
+.todo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* Align items at the start */
+    gap: 50px; /* Adjust the space between the content and the image */
+    max-width: 800px; /* Adjust based on your design preference */
+    margin: auto; /* Center the container */
+    padding: 20px 0; /* Add some vertical padding */
+    flex-direction: column;
+    background-color: #F8CFD8;
+}
+
+body > main > div.page-container > div.content-left > div > a.compose-btn{
+    background-color: #699794;
+}
+
+body > main > div.page-container > div.content-left > div > a.compose-btn:hover {
+    background-color: #1398a7; /* Darker shade of green on hover */
+}
+
+.back-to-blog-container {
+    width: 100%; /* Take full width to center content */
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+}
+
+.todo-description{
+    max-width: 50%; /* Adjust this value to control how much you want to shrink the paragraph */
+    margin: 0 auto; /* This centers the paragraph horizontally */
+    text-align: center; /* Optional: if you want the text itself to be centered */
+}
+
+
+@media (min-width: 1024px) {
+    .main-container, .contact-main-container, .about-page-container, .page-container {
+        justify-content: center; /* Distribute space evenly */
+        padding: 40px 20px; /* Increase padding */
+        align-items: flex-start;
+        padding: 20px;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+    .content-left, .content-right, .contact-container, .contact-image {
+        /* Adjust width or flex-basis as necessary for larger screens */
+        flex-basis: 45%; /* Example: Adjust based on your content */
+    }
+
+    .navbar-nav {
+        justify-content: flex-end;
+    }
+
+    header, footer {
+        padding: 20px 0; /* Increase padding for larger headers and footers */
+    }
+
+    h1 {
+        font-size: 3rem; /* Increase font size for main headings */
+    }
+
+    .post, .todo-container {
+        /* Example: Adjust the max-width or padding for larger screens */
+        max-width: 1700px; /* Increase max-width for larger screens */
+        margin: 20px auto; /* Ensure center alignment */
+        padding: 30px 15px; /* Increase padding */
+    }
+
+    .compose-form input, .compose-form textarea, .compose-form button,
+    .btn, .btn-action {
+        padding: 15px 20px; /* Increase padding for larger elements */
+        font-size: 1rem; /* Increase font size if needed */
+    }
+}
+
+body > main {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    min-height: calc(73vh - 100px);
+}
+
+.compose-form {
+    max-width: 960px;
+    margin: 0 auto; /* Ensure center alignment */
+    padding: 30px 15px; /* Increase padding */
+}
+
+
+#contact-right-container{
+    gap: 200px;
+    margin-top: 70px;
+}
+
+.email-btn {
+    display: inline-block;
+    background-color: #1398a7; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding around the text */
+    text-decoration: none; /* Remove underline from the link */
+    border-radius: 5px; /* Rounded corners */
+    font-family: 'Poppins', sans-serif; /* Consistent font style */
+    margin-top: 25px;
+}
+
+.email-btn:hover {
+    background-color: #083F45; /* Darker shade of green on hover */
+}
+
+h2 {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    padding-bottom: 20px;
+}

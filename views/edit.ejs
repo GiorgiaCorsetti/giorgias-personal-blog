@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/other.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    
+    <title>Edit Post</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <h1>Edit Post</h1>
+    <div class="compose-form">
+    <form action="/edit/<%= postId %>" method="post">
+        <label for="postTitle">Title</label>
+        <input type="text" name="title" value="<%= post.title %>" required>
+        <label for="postContent">Content</label>
+        <textarea name="content" required><%= post.content %></textarea>
+
+        <button type="submit">Save Changes</button>
+    </form>
+</div>
+<%- include('partials/footer') %>
+</body>
+</html>
