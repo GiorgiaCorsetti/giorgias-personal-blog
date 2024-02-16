@@ -13,17 +13,19 @@ footer {
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-}
+    align-items: center;}
 
+    
 .navbar-nav {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 .nav-item {
     display: inline-block;
-    margin-left: 20px; /* Space between nav items */
+    margin-left: 10px 0px; /* Space between nav items */
 }
 
 .nav-link {
@@ -54,14 +56,15 @@ footer {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .navbar-nav {
-        display: block;
+        display: flex;
         text-align: center;
+        justify-content: flex-end;
     }
 
     .nav-item {
-        display: block;
-        margin: 10px 0;
-    }
+        display: flex;
+        margin: 0 10px;
+    } 
 }
 
 /* Main content layout */

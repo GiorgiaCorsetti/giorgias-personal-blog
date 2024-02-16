@@ -2,7 +2,13 @@
 * {
     margin: 0;
     padding: 0;
-    
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    box-sizing: border-box; /* Apply box-sizing to all elements */
 }
 
 body, html {
@@ -59,20 +65,21 @@ h1 {
 /* Form Styling */
 .compose-form {
     background-color: #fff;
-    padding: 10px 0px;
-    margin: 20px auto;
+    padding: 15px;
+    margin: 0 auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    max-width: 800px;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
 }
 
 .compose-form input, .compose-form textarea, .compose-form button {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin: 10px auto;
+    width: 100%;
+    padding: 10.5em;
+    margin-bottom: 1em;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -83,9 +90,8 @@ h1 {
     cursor: pointer;
     border: none;
     border-radius: 4px;
-    padding: 10px 20px; /* Adjust padding as needed */
+    padding: 0.5em 1em; /* Adjust padding as needed */
     margin-top: 10px; /* Adjust margin to center the button */
-    width: auto; /* Allow button width to adjust based on content */
 }
 
 .compose-form button:hover {
@@ -419,9 +425,6 @@ body > main > div.page-container > div.content-left > div > a.compose-btn:hover 
         flex-basis: 45%; /* Example: Adjust based on your content */
     }
 
-    .navbar-nav {
-        justify-content: flex-end;
-    }
 
     header, footer {
         padding: 20px 0; /* Increase padding for larger headers and footers */
@@ -456,7 +459,6 @@ body > main {
     margin: 0 auto; /* Ensure center alignment */
     padding: 30px 15px; /* Increase padding */
     height: 498.781;
-    width: 710px;
 }
 
 .button-container {
@@ -497,3 +499,37 @@ body > main > div > form > div > button {
 .back-to-blog {
     background-color: #08282C;
 }
+
+@media (max-width: 767px) {
+    .compose-form {
+        padding: 10px; /* Add padding inside the form */
+        margin: 0 10px; /* Add horizontal margin to the form */
+    }
+
+    .compose-form input,
+    .compose-form textarea {
+        padding: 10px; /* Add padding inside the inputs and textarea */
+        margin-bottom: 10px; /* Space below each input and textarea */
+    }
+
+    .compose-form button,
+    .back-to-blog {
+        padding: 10px 20px; /* Padding inside the buttons */
+        margin-bottom: 10px; /* Space below the buttons */
+    }
+
+    /* Ensure that nothing inside the form has a fixed width or min-width set in pixels */
+    .compose-form input,
+    .compose-form textarea,
+    .compose-form button,
+    .back-to-blog {
+        width: 100%; /* Full width of their parent container */
+        min-width: 0; /* Override any minimum width */
+        box-sizing: border-box; /* Include padding and borders in the width */
+    }
+}
+
+    .compose-form button:hover,
+    .back-to-blog:hover {
+        background-color: #96203A; /* Consistent hover effect */
+    }
