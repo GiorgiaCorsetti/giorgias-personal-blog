@@ -81,6 +81,11 @@ h1 {
     background-color: #662549;
     color: white;
     cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px; /* Adjust padding as needed */
+    margin-top: 10px; /* Adjust margin to center the button */
+    width: auto; /* Allow button width to adjust based on content */
 }
 
 .compose-form button:hover {
@@ -104,11 +109,15 @@ h1 {
     text-align: center;
 }
 
+body > main > div > form > textarea {
+    height: 250px;
+}
 
 .edit-btn {
     border: 1px solid transparent; /* Make <a> look like <button> */
-    background-color: #de923b;
+    background-color: #AE445A;
 }
+
 
 .buttons-container {
     text-align: center; /* Center-align the content */
@@ -431,7 +440,7 @@ body > main > div.page-container > div.content-left > div > a.compose-btn:hover 
 
     .compose-form input, .compose-form textarea, .compose-form button,
     .btn, .btn-action {
-        padding: 15px 20px; /* Increase padding for larger elements */
+        padding: 10px 15px; /* Increase padding for larger elements */
         font-size: 1rem; /* Increase font size if needed */
     }
 }
@@ -446,8 +455,13 @@ body > main {
     max-width: 960px;
     margin: 0 auto; /* Ensure center alignment */
     padding: 30px 15px; /* Increase padding */
+    height: 498.781;
+    width: 710px;
 }
 
+.button-container {
+    text-align: center;
+}
 
 #contact-right-container{
     gap: 200px;
@@ -474,4 +488,12 @@ h2 {
     font-weight: 400;
     font-style: normal;
     padding-bottom: 20px;
+}
+
+body > main > div > form > div > button {
+    font-family: 'Poppins', sans-serif;
+}
+
+.back-to-blog {
+    background-color: #08282C;
 }
