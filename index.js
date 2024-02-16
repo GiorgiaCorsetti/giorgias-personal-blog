@@ -4,7 +4,7 @@ import bodyParser from 'body-parser';
 
 // Initialize express app
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
 
 
@@ -70,6 +70,19 @@ app.get("/todos", (req, res) => {
 
   app.post("/edit/:id", (req, res) => {
     const postId = parseInt(req.params.id, 10); // Parse `id` as integer
+    
+    if (!isNaN(postId) && postId >= 0 && postId < posts.length) {
+        const updatedPost = {
+            title: req.body.title,
+            content: req.body.content
+        };
+
+        posts[postId] = updatedPost; // Update the post
+        res.redirect("/");
+    } else {
+        // Handle invalid postId: redirect, show an error, etc.
+        res.status(404).send('Post not found');
+    }
 
     app.post("/delete/:id", (req, res) => {
         const postId = parseInt(req.params.id, 10); // Convert the index to an integer
@@ -97,8 +110,6 @@ app.get("/todos", (req, res) => {
     }
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
-
