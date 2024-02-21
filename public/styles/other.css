@@ -56,7 +56,7 @@ footer {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .navbar-nav {
-        display: inline-flex;
+        display: table-cell;
         text-align: center;
     }
 
