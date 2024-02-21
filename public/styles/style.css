@@ -466,6 +466,22 @@ body > main {
 
 .button-container {
     text-align: center;
+    display: flex; /* This makes .button-container a flex container */
+    justify-content: center; /* This centers the buttons in the container */
+    align-items: center; /* This vertically centers the buttons */
+    gap: 10px; /* Adjust the gap between buttons */
+}
+
+.button-container .btn, .button-container .back-to-blog {
+    flex: 1; /* This makes the buttons take up equal space in the container */
+    padding: 10px 20px; /* Adjust padding as needed */
+    /* Other styles remain the same */
+}
+
+@media (max-width: 767px) {
+    .button-container {
+        flex-direction: column; /* Stack the buttons vertically on mobile */
+    }
 }
 
 #contact-right-container{
