@@ -198,6 +198,10 @@ body > main > div > p {
     .compose-form {
         flex-direction: column;
     }
+
+    .a {
+        margin: 0;
+    }
 }
 
 #posts > div > div {
@@ -364,7 +368,7 @@ body > main > div > div.content-left {
         flex: 1 1 100%; /* Allow content to take full width on smaller screens */
     }
     .content-right img {
-        margin: 20px; /* Add some top margin to the image on smaller screens */
+        margin: 40px; /* Add some top margin to the image on smaller screens */
         width: 80%;
     }
     .post{
