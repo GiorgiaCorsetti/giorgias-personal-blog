@@ -56,9 +56,8 @@ footer {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .navbar-nav {
-        display: flex;
+        display: inline-flex;
         text-align: center;
-        justify-content: flex-end;
     }
 
     .nav-item {
