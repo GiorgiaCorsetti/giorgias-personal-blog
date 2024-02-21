@@ -472,15 +472,27 @@ body > main {
     gap: 10px; /* Adjust the gap between buttons */
 }
 
-.button-container .btn, .button-container .back-to-blog {
-    flex: 1; /* This makes the buttons take up equal space in the container */
-    padding: 10px 20px; /* Adjust padding as needed */
-    /* Other styles remain the same */
+.button-container .btn {
+    flex: 0 0 50%; /* Each button takes up half of the container width without growing or shrinking */
+    text-align: center; /* Center the text inside the buttons */
+    padding: 10px 20px; /* Provide adequate padding */
+    /* Other styles like background-color, color, etc., should be the same as you already have them */
 }
 
+/* Override any specific margins that might be affecting individual buttons */
+.button-container .btn.back-to-blog,
+.button-container .btn.create-post {
+    margin: 0; /* Override any margins to ensure buttons are centered */
+}
+
+/* Adjust for mobile view */
 @media (max-width: 767px) {
     .button-container {
-        flex-direction: column; /* Stack the buttons vertically on mobile */
+        flex-direction: column; /* Stack the buttons on top of each other */
+    }
+
+    .button-container .btn {
+        width: 100%; /* Each button takes the full width */
     }
 }
 
