@@ -110,6 +110,11 @@ footer {
         margin-left: 0;
         text-align: center;
     }
+
+    body > header > div > nav > a {
+        margin-left: 5px;
+        margin: 0;
+    }
 }
 
 /* Text styling for readability */
