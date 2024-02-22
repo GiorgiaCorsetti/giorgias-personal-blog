@@ -256,15 +256,21 @@ flex: 1 1 300px; /* Allow both children to grow and take up equal space */
     .about-page-container {
         flex-direction: column; /* Stack content and image vertically on smaller screens */
         align-items: center;
-        gap: 100px;
+        gap: 50px;
     }
     .about-content-left, .content-right {
         width: 100%; /* Allow content to take full width on smaller screens */
         padding: 0 10px;
     }
-    .about-content-right img {
-        margin-top: 50px; /* Add some top margin to the image on smaller screens */
-    }
+
+    .contact-main-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start; /* Align items at the start */
+        gap: 10px; /* Adjust the space between the content and the image */
+        max-width: 1200px; /* Adjust based on your design preference */
+        margin: 30px 30px 30px 30px; /* Center the container */
+    
 }
 
 
@@ -281,11 +287,15 @@ flex: 1 1 300px; /* Allow both children to grow and take up equal space */
 }
 
 .contact-container {
-    flex: 1;
-    text-align: center; /* Ensures text alignment is to the left */
-    margin: 0px 50px 50px 50px;
-    background-color: #F8CFD8;
-
+        display: flex;
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically (if needed) */
+        flex-direction: column; /* Stack children vertically */
+        max-width: 600px;
+        padding: 0 20px;
+        text-align: center;
+        margin: auto;
+    }
 }
 
 body > main > div > div.content-left {
@@ -300,6 +310,7 @@ body > main > div > div.content-left {
     margin-left: 100px;
     
 }
+
 
 
 
@@ -445,7 +456,7 @@ body > main > div.page-container > div.content-left > div > a.compose-btn:hover 
         padding: 30px 15px; /* Increase padding */
     }
 
-    .compose-form input, .compose-form textarea, .compose-form button,
+    .compose-form input, .compose-form textarea,
     .btn, .btn-action {
         padding: 10px 15px; /* Increase padding for larger elements */
         font-size: 1rem; /* Increase font size if needed */
@@ -465,18 +476,17 @@ body > main {
 }
 
 .button-container {
-    text-align: center;
-    display: flex; /* This makes .button-container a flex container */
-    justify-content: center; /* This centers the buttons in the container */
-    align-items: center; /* This vertically centers the buttons */
-    gap: 10px; /* Adjust the gap between buttons */
+    text-align: center; /* Center the container's content */
+    margin-top: 20px; /* Add some space above the container */
 }
 
+/* Style for the buttons */
 .button-container .btn {
-    flex: 0 0 50%; /* Each button takes up half of the container width without growing or shrinking */
+    display: inline-block; /* Allows the buttons to be next to each other */
+    padding: 10px 15px; /* Adequate padding */
     text-align: center; /* Center the text inside the buttons */
-    padding: 10px 20px; /* Provide adequate padding */
-    /* Other styles like background-color, color, etc., should be the same as you already have them */
+    /* Equal min-width for both buttons based on the larger button's content */
+    min-width: 150px; /* Adjust this value based on your content */
 }
 
 /* Override any specific margins that might be affecting individual buttons */
@@ -487,17 +497,17 @@ body > main {
 
 /* Adjust for mobile view */
 @media (max-width: 767px) {
-    .button-container {
-        flex-direction: column; /* Stack the buttons on top of each other */
-    }
-
     .button-container .btn {
-        width: 100%; /* Each button takes the full width */
+        display: block; /* Stack buttons vertically on smaller screens */
+        width: auto; /* Let each button grow to fit its content */
+        margin: 10px auto; /* Maintain center alignment and add vertical space */
     }
 }
 
+
+
 #contact-right-container{
-    gap: 200px;
+    gap: 90px;
     margin-top: 70px;
 }
 
@@ -529,6 +539,9 @@ body > main > div > form > div > button {
 
 .back-to-blog {
     background-color: #08282C;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 }
 
 @media (max-width: 767px) {

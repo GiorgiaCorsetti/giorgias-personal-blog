@@ -83,33 +83,21 @@ app.get("/todos", (req, res) => {
         // Handle invalid postId: redirect, show an error, etc.
         res.status(404).send('Post not found');
     }
+});
 
-    app.post("/delete/:id", (req, res) => {
-        const postId = parseInt(req.params.id, 10); // Convert the index to an integer
-    
-        // Check if the postId is within bounds
-        if (!isNaN(postId) && postId >= 0 && postId < posts.length) {
-            posts.splice(postId, 1); // Remove the post from the array
-            res.redirect("/"); // Redirect back to the home page
-        } else {
-            res.status(404).send("Post not found.");
-        }
-    });
+app.post("/delete/:id", (req, res) => {
+    const postId = parseInt(req.params.id, 10); // Convert the index to an integer
 
+    // Check if the postId is within bounds
     if (!isNaN(postId) && postId >= 0 && postId < posts.length) {
-        const updatedPost = {
-            title: req.body.title,
-            content: req.body.content
-        };
-
-        posts[postId] = updatedPost; // Update the post
-        res.redirect("/");
+        posts.splice(postId, 1); // Remove the post from the array
+        res.redirect("/"); // Redirect back to the home page
     } else {
-        // Handle invalid postId: redirect, show an error, etc.
-        res.status(404).send('Post not found');
+        res.status(404).send("Post not found.");
     }
 });
 
+// Start the server...
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });

@@ -56,7 +56,6 @@ footer {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .navbar-nav {
-        display: contents;
         text-align: center;
     }
 
@@ -118,6 +117,10 @@ footer {
     body > header > div > nav > a {
         margin-left: 5px;
         margin: 0;
+    }
+
+    .navbar-logo {
+        display: none;
     }
 }
 
